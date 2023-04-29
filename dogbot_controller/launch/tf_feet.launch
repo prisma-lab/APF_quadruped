@@ -1,0 +1,22 @@
+<launch>
+
+    <node pkg="tf2_ros" 
+        type="static_transform_publisher" 
+        name="fr_foot" args="0 -0.03 -0.295 0 0 0.55 front_right_foot fr_foot" />
+
+    <node pkg="tf2_ros" 
+        type="static_transform_publisher" 
+        name="fl_foot" args="0 -0.03 -0.295 0 0 0.55 front_left_foot fl_foot" />
+
+    <node pkg="tf2_ros" 
+        type="static_transform_publisher" 
+        name="br_foot" args="0 -0.03 -0.295 0 0 0.55 back_right_foot br_foot" />
+
+    <node pkg="tf2_ros" 
+        type="static_transform_publisher" 
+        name="bl_foot" args="0 -0.03 -0.295 0 0 0.55 back_left_foot bl_foot" />
+
+
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find dogbot_controller)/rviz.rviz" required="true" />	
+
+</launch>
